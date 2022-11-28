@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="script.js"></script> 
+  <title>hangman</title>
+</head>
+<body>
+  <div id="hangm">
+    <div style="height: 2em; margin-bottom: 3em;">
+      <div id="hangm_end" class="h"></div>
+
+    </div>
+     <div id="hangm_animation">
+      <div id="hangm_2" class="h pole_h"></div>
+      <div id="hangm_1" class="h pole_v"></div>
+      <div id="hangm_3" class="h rope"></div>
+      <div id="hangm_4" class="h man_head"></div>
+      <div id="hangm_5" class="h man_upper"></div>
+      <div id="hangm_6" class="h man_lower"></div>
+
+     </div>
+     <div style="height: 2em;">
+      <div id="hangm_guesses" class="h"></div>
+     </div>
+
+     <form>
+      <div id="hangm_guessbox" style="height: 8em;" class="h">
+       <div style="height: 4em;">
+        guess the word: <div id="hangm_word"></div>
+       </div>
+       <input id="guess" onkeyup="Hangman.guess(this.value); this.value=''; return false"; type="text" placeholder=""> 
+      </div>
+      <div class="col-sm-3">
+       <button type="button" id="btn-start" class="btn-lg btn-info" onclick="Hangman.reset(); return false;">new game</button>
+      </div>
+     </form>
+
+  </div>
+  <p style="margin-top: 3em;">
+     <a class="github" alt="github" href="https://github.com/gonzalote99">
+      <i class="fa fa-github" aria-hidden="true"></i>
+       
+
+     </a>
+     <a class="twitter" alt="twitter"  style="margin-right: 5px;">
+      <i class="fa fa-twitter" aria-hidden="true"></i>
+     </a>
+  </p>
+</body>
+</html>
